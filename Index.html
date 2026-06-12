@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>FILXYU APP</title>
+
+<style>
+
+body{
+background:#000;
+color:white;
+font-family:Arial;
+text-align:center;
+}
+
+.box{
+margin:40px auto;
+width:320px;
+padding:20px;
+border:2px solid lime;
+border-radius:20px;
+}
+
+input,select,button{
+
+padding:12px;
+margin:10px;
+border-radius:10px;
+border:0;
+
+}
+
+button{
+background:lime;
+}
+
+.merah{
+color:red;
+font-weight:bold;
+}
+
+.fitur{
+
+display:none;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<div class="box" id="login">
+
+
+<h1>FILXYU APP</h1>
+
+
+<input id="user"
+placeholder="Username">
+
+
+<br>
+
+
+<select id="umur">
+
+<option>
+Pilih Umur
+</option>
+
+<option>10</option>
+<option>15</option>
+<option>18+</option>
+
+</select>
+
+
+<br>
+
+
+<button onclick="lanjut()">
+LANJUT
+</button>
+
+
+<p id="pwArea"></p>
+
+
+</div>
+
+
+
+
+<div class="box fitur" id="menu">
+
+
+<h1>MENU APP</h1>
+
+
+<p class="merah">
+INGAT YA USERNAME AMA PW JANGAN SAMPAI LUPA
+</p>
+
+
+<h2 id="nama"></h2>
+
+
+<input id="pw"
+type="password"
+placeholder="Password">
+
+
+<br>
+
+
+<button onclick="masuk()">
+PLAY
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="box fitur" id="fitur">
+
+
+<h1>FITUR</h1>
+
+
+<button>
+🎬 VIDEO
+</button>
+
+
+<br>
+
+
+<button>
+🎵 MUSIK
+</button>
+
+
+<br>
+
+
+<button>
+⚙ PENGATURAN
+</button>
+
+
+</div>
+
+
+
+
+
+<script>
+
+
+let username="";
+
+
+function lanjut(){
+
+
+username =
+document.getElementById("user").value;
+
+
+if(username==""){
+alert("Isi username dulu");
+return;
+}
+
+
+document.getElementById("login").style.display="none";
+
+
+document.getElementById("menu").style.display="block";
+
+
+document.getElementById("nama").innerHTML =
+"Username: #####";
+
+
+}
+
+
+
+
+function masuk(){
+
+
+let pw =
+document.getElementById("pw").value;
+
+
+if(pw==""){
+
+alert("Masukkan password");
+return;
+
+}
+
+
+document.getElementById("menu").style.display="none";
+
+
+document.getElementById("fitur").style.display="block";
+
+
+}
+
+
+
+</script>
+
+
+</body>
+  </html>
